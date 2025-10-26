@@ -47,8 +47,8 @@ export default function App() {
     try {
       console.log('Fetching routes and vehicles...');
       const [vehiclesRes, routesRes] = await Promise.all([
-        fetch('http://localhost:3000/vehicles'),
-        fetch('http://localhost:3000/routes'),
+        fetch('https://bu-transit-server.onrender.com/vehicles'),
+        fetch('https://bu-transit-server.onrender.com/routes'),
       ]);
 
       if (!vehiclesRes.ok || !routesRes.ok) throw new Error('Failed to fetch data');
