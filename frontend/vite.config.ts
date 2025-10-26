@@ -51,7 +51,9 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'dist',
+      assestsDir: 'assets',
+      sourcemap: false,
     },
     server: {
       port: 3001,
