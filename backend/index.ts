@@ -9,7 +9,7 @@ import * as resource from "./resource";
 // Defines app
 const app = new Hono()
   .use("/*", cors())
-
+  .use("https://bu-transit.onrender.com/*",cors())
   // Vehicles
   .get("/vehicles", (c) => c.json(cache.vehicles))
   .get("/vehicle/:vehicleID", (c) => {
