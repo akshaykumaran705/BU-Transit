@@ -62,7 +62,7 @@ export function GoogleMapView({
   const polylinesRef = useRef<google.maps.Polyline[]>([]);
   const journeyOverlaysRef = useRef<(google.maps.Polyline | google.maps.Marker)[]>([]);
   const [mapLoaded, setMapLoaded] = useState(false);
-
+  const API_KEY = process.env.VITE_GOOGLE_MAPS_API_KEY;
   // Initialize Google Map
   useEffect(() => {
     if (!mapRef.current) return;
@@ -90,7 +90,7 @@ export function GoogleMapView({
       initMap();
     } else {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places`;      
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`;      
       script.async = true;
       script.defer = true;
       script.onload = initMap;
