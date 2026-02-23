@@ -9,7 +9,7 @@ import * as resource from "./resource";
 // Defines app
 const app = new Hono()
 .use("/*", cors({
-  origin: ["https://bu-transit.onrender.com", "http://localhost:5173"],
+  origin: ["https://bu-transit.onrender.com", "http://localhost:3000"],
   credentials: true,
 }))
   // Vehicles
